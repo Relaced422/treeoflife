@@ -5,13 +5,13 @@ public class config {
     // 🌳 Aankoopprijzen per boomtype
     public static final int APPELBOOM_PRICE = 200;
     public static final int BANANENPLANT_PRICE = 300;
-    public static final int MANGOboom_PRICE = 500;
-    public static final int AVOCADOboom_PRICE = 600;
+    public static final int MANGOBOOM_PRICE = 500;
+    public static final int AVOCADOBOOM_PRICE = 600;
     public static final int CITROENBOOM_PRICE = 350;
     public static final int PERENBOOM_PRICE = 250;
     public static final int KERSENBOOM_PRICE = 400;
     public static final int DRUIVENPLANT_PRICE = 450;
-    public static final int ANANASSTRUik_PRICE = 700;
+    public static final int ANANASSTRUIK_PRICE = 700;
     public static final int SPACEWEEDPLANT_PRICE = 1000;
 
     // 🍎 Fruit verkoopprijzen
@@ -29,13 +29,13 @@ public class config {
     // ⏳ Cooldowns per boomtype (in rondes)
     public static final int APPELBOOM_COOLDOWN = 1;
     public static final int BANANENPLANT_COOLDOWN = 1;
-    public static final int MANGOboom_COOLDOWN = 2;
-    public static final int AVOCADOboom_COOLDOWN = 3;
+    public static final int MANGOBOOM_COOLDOWN = 2;
+    public static final int AVOCADOBOOM_COOLDOWN = 3;
     public static final int CITROENBOOM_COOLDOWN = 1;
     public static final int PERENBOOM_COOLDOWN = 1;
     public static final int KERSENBOOM_COOLDOWN = 2;
     public static final int DRUIVENPLANT_COOLDOWN = 2;
-    public static final int ANANASSTRUik_COOLDOWN = 4;
+    public static final int ANANASSTRUIK_COOLDOWN = 4;
     public static final int SPACEWEEDPLANT_COOLDOWN = 5;
 
     // 📦 Opslag instellingen
@@ -44,4 +44,5 @@ public class config {
     public static final int STORAGE_UPGRADE_AMOUNT = 10;
 
     // 💰 Startbalans
+    public static final int START_BALANCE = 1000;
 }

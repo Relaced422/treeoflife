@@ -7,16 +7,15 @@ public class Shop {
 
     public Shop() {
         // Voeg hier de soorten bomen toe die je kunt kopen
-    	treeCatalog.put("Appelboom", new Tree("Appelboom", "Appels", config.APPELBOOM_PRICE, 2, config.APPELBOOM_COOLDOWN));
-    	treeCatalog.put("Appelboom", new Tree("Appelboom", "Appels", config.APPELBOOM_PRICE, 2, config.APPELBOOM_COOLDOWN));
-    	treeCatalog.put("Bananenplant", new Tree("Bananenplant", "Bananen", config.BANANENPLANT_PRICE, 2, config.BANANENPLANT_COOLDOWN));
-    	treeCatalog.put("Mangoboom", new Tree("Mangoboom", "Mango's", config.MANGOboom_PRICE, 4, config.MANGOboom_COOLDOWN));
-    	treeCatalog.put("Avocadoboom", new Tree("Avocadoboom", "Avocado's", config.AVOCADOboom_PRICE, 3, config.AVOCADOboom_COOLDOWN));
+        treeCatalog.put("Appelboom", new Tree("Appelboom", "Appels", config.APPELBOOM_PRICE, 2, config.APPELBOOM_COOLDOWN));
+        treeCatalog.put("Bananenplant", new Tree("Bananenplant", "Bananen", config.BANANENPLANT_PRICE, 2, config.BANANENPLANT_COOLDOWN));
+        treeCatalog.put("Mangoboom", new Tree("Mangoboom", "Mango's", config.MANGOBOOM_PRICE, 4, config.MANGOBOOM_COOLDOWN));
+        treeCatalog.put("Avocadoboom", new Tree("Avocadoboom", "Avocado's", config.AVOCADOBOOM_PRICE, 3, config.AVOCADOBOOM_COOLDOWN));
     	treeCatalog.put("Citroenboom", new Tree("Citroenboom", "Citroenen", config.CITROENBOOM_PRICE, 2, config.CITROENBOOM_COOLDOWN));
     	treeCatalog.put("Perenboom", new Tree("Perenboom", "Peren", config.PERENBOOM_PRICE, 2, config.PERENBOOM_COOLDOWN));
     	treeCatalog.put("Kersenboom", new Tree("Kersenboom", "Kersen", config.KERSENBOOM_PRICE, 3, config.KERSENBOOM_COOLDOWN));
     	treeCatalog.put("Druivenplant", new Tree("Druivenplant", "Druiven", config.DRUIVENPLANT_PRICE, 5, config.DRUIVENPLANT_COOLDOWN));
-    	treeCatalog.put("Ananasstruik", new Tree("Ananasstruik", "Ananassen", config.ANANASSTRUik_PRICE, 2, config.ANANASSTRUik_COOLDOWN));
+        treeCatalog.put("Ananasstruik", new Tree("Ananasstruik", "Ananassen", config.ANANASSTRUIK_PRICE, 2, config.ANANASSTRUIK_COOLDOWN));
     	treeCatalog.put("Spaceweedplant", new Tree("Spaceweedplant", "Spaceweed", config.SPACEWEEDPLANT_PRICE, 1, config.SPACEWEEDPLANT_COOLDOWN));
     }
 
