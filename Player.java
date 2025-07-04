@@ -3,8 +3,7 @@ package treeoflife;
 import java.util.*;
 
 public class Player {
-    public int balance = 1000;
-    public int storage = 10;
+	public int balance = config.START_BALANCE;
     public int storageLimit = config.START_STORAGE;
     public int storageUpgradePrice = config.STORAGE_UPGRADE_PRICE;
     public Map<String, Integer> fruits = new HashMap<>();
@@ -23,8 +22,15 @@ public class Player {
     public void collectFruits() {
         for (Tree tree : trees) {
             tree.nextRound();
-            int amount = tree.harvest();
-            if (amount > 0) {
+            int harvested = tree.harvest();
+
+            if (harvested > 0) {
+                int freeSpace = storageLimit - getTotalFruitStored();
+                if (freeSpace <= 0) {
+                    System.out.println("Opslag vol! Geen " + tree.fruitName + " geoogst.");
+                    continue;
+                }
+                int amount = Math.min(harvested, freeSpace);
                 fruits.put(tree.fruitName, fruits.getOrDefault(tree.fruitName, 0) + amount);
                 System.out.println("Je oogstte " + amount + " " + tree.fruitName + " van je " + tree.name + ".");
             } else {
@@ -55,7 +61,6 @@ public class Player {
             System.out.println("- " + fruit + ": " + fruits.get(fruit));
         }
 
-        int totaal = getTotalFruitStored();
         System.out.println("📦 Opslag: " + getTotalFruitStored() + " / " + storageLimit);
         System.out.println("           " + getStorageBar());
     }
@@ -147,6 +152,16 @@ public class Player {
 	
 	        bar.append(percentDisplay).append("%");
 	        return bar.toString();
+	    }
+
+	    public void upgradeStorage() {
+	        if (balance < storageUpgradePrice) {
+	            System.out.println("Niet genoeg geld om je opslag te upgraden.");
+	            return;
+	        }
+	        balance -= storageUpgradePrice;
+	        storageLimit += config.STORAGE_UPGRADE_AMOUNT;
+	        System.out.println("Opslag vergroot naar " + storageLimit + ".");
 	    }
 
 

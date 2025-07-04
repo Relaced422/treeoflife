@@ -5,9 +5,8 @@ public class Tree {
     public String fruitName;
     public int buyPrice;
     public int fruitPerHarvest;
-    public int currentCooldown; // deze wordt bijgehouden per boom
-    public int cooldown;         // aantal rondes tussen harvests
-    public int cooldownLeft;     // hoeveel rondes nog wachten
+    public int cooldown;      // aantal rondes tussen harvests
+    public int cooldownLeft;  // hoeveel rondes nog wachten
 
     public Tree(String name, String fruitName, int buyPrice, int fruitPerHarvest, int cooldown) {
         this.name = name;
@@ -15,7 +14,7 @@ public class Tree {
         this.buyPrice = buyPrice;
         this.fruitPerHarvest = fruitPerHarvest;
         this.cooldown = cooldown;
-        this.currentCooldown = 0; // start direct klaar om te oogsten
+        this.cooldownLeft = 0; // start direct klaar om te oogsten
     }
 
 

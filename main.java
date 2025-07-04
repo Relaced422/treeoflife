@@ -163,8 +163,8 @@ public class main {
 	    } else if (roll < 25) {
 	        eventMessage = "🌩️ Storm! Geen bomen kunnen oogsten.";
 	        for (Tree tree : player.trees) {
-	            tree.currentCooldown = Math.max(tree.currentCooldown, 1);
-	        }
+                tree.cooldownLeft = Math.max(tree.cooldownLeft, 1);
+            }
 	    } else if (roll < 30) {
 	        eventMessage = "🪱 Rotte oogst! 1 willekeurige fruitsoort rot weg.";
 	        if (!player.fruits.isEmpty()) {
